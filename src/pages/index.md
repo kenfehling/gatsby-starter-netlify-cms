@@ -64,6 +64,6 @@ main:
     alt: A green cup of a coffee on a wooden table
     image: /img/products-grid2.jpg
   image3:
-    alt: Coffee beans
+    alt: Cats
     image: /img/fake_cats.jpg
 ---
