@@ -3,7 +3,7 @@ templateKey: index-page
 title: Cat
 image: /img/thinking-of-getting-a-cat.png
 heading: Great coffee with a conscience
-subheading: Somewhat less sleepy than a rabbit
+subheading: Somewhat less sleepy than a rabbit?
 mainpitch:
   title: Why Kaldi
   description: >
