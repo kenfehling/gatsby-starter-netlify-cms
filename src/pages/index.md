@@ -3,7 +3,7 @@ templateKey: index-page
 title: Cat
 image: /img/thinking-of-getting-a-cat.png
 heading: Great coffee with a conscience
-subheading: Somewhat less sleepy than a rabbit
+subheading: Somewhat less sleepy than a rabbit?
 mainpitch:
   title: Why Kaldi
   description: >
@@ -58,12 +58,12 @@ main:
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
   image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    alt: Orange cat
+    image: /img/cat03.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
     image: /img/products-grid2.jpg
   image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+    alt: Cats
+    image: /img/fake_cats.jpg
 ---
