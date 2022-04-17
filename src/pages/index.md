@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Cat
 image: /img/thinking-of-getting-a-cat.png
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: Somewhat less sleepy than a rabbit
 mainpitch:
   title: Why Kaldi
   description: >
