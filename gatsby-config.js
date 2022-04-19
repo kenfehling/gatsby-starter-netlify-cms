@@ -8,14 +8,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-material-ui",
     {
-      resolve: "gatsby-plugin-sass",
-      options: {
-        sassOptions: {
-          indentedSyntax: true,
-        },
-      },
-    },
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
@@ -73,13 +65,6 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
         enableIdentityWidget: true
-      },
-    },
-    {
-      resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
-      options: {
-        develop: false, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
     "gatsby-plugin-netlify", // make sure to keep it last in the array
