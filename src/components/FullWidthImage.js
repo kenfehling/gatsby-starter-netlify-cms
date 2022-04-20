@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
+const filters = "brightness(50%) contrast(90%) saturate(70%)";
+
 export default function FullWidthImage(props) {
   const {
     height = 400,
@@ -27,6 +29,7 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
+              filter: filters,
               // You can set a maximum height for the image, if you wish.
               height: height,
               width: "100%",
@@ -44,6 +47,7 @@ export default function FullWidthImage(props) {
             objectPosition={imgPosition}
             style={{
               gridArea: "1/1",
+              filter: filters,
               // You can set a maximum height for the image, if you wish.
               maxHeight: height,
             }}
@@ -69,11 +73,7 @@ export default function FullWidthImage(props) {
             {/* Any content here will be centered in the component */}
             {title && (
               <h1
-                className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
                   color: "white",
                   lineHeight: "1",
                   padding: "0.25em",
@@ -84,11 +84,7 @@ export default function FullWidthImage(props) {
             )}
             {subheading && (
               <h3
-                className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                 style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
                   color: "white",
                   lineHeight: "1",
                   padding: "0.25rem",

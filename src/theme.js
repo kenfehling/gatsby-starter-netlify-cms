@@ -35,7 +35,7 @@ const lightTheme = {
 const darkTheme = {
     palette: {
         primary: {
-            main: '#FF9933'
+            main: '#FFBB77'
         },
         secondary: {
             main: `#19857b`,
