@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import { ThemeProvider } from '@mui/system'
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -22,6 +22,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
+          <ThemeProvider theme={getTheme('dark')}>
       <FullWidthImage img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
@@ -70,6 +71,7 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
+      </ThemeProvider>
     </div>
   );
 };
