@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: "The #1 Record Store on Mars"
-image: /img/pexels-cottonbro-6865917_cropped.jpg
+image: /img/fake_cats.jpg
 heading: Great coffee with a conscience
 subheading: Since 2038
 mainpitch:
