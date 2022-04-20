@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Typography } from "@mui/material";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const filters = "brightness(50%) contrast(90%) saturate(70%)";
@@ -72,7 +73,8 @@ export default function FullWidthImage(props) {
           >
             {/* Any content here will be centered in the component */}
             {title && (
-              <h1
+              <Typography 
+              variant="h1"
                 style={{
                   color: "white",
                   lineHeight: "1",
@@ -81,10 +83,11 @@ export default function FullWidthImage(props) {
                 }}
               >
                 {title}
-              </h1>
+              </Typography>
             )}
             {subheading && (
-              <h3
+              <Typography 
+              variant="h3"
                 style={{
                   color: "white",
                   lineHeight: "1",
@@ -94,7 +97,7 @@ export default function FullWidthImage(props) {
                 }}
               >
                 {subheading}
-              </h3>
+              </Typography>
             )}
           </div>
         )}

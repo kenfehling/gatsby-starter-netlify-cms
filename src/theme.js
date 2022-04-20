@@ -9,7 +9,19 @@ const baseTheme = {
             lg: 960,
             xl: 1080
         }
-    }
+    },
+    typography: {
+        h1: {
+            fontSize: 32,
+            fontWeight: 700,
+            fontFamily: ['Rajdhani']
+        },
+        h3: {
+            fontSize: 24,
+            fontWeight: 700,
+            fontFamily: ['Rajdhani']
+        }
+    },
 };
 
 const lightTheme = {

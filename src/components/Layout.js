@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import {ThemeProvider, useMediaQuery} from "@mui/material";
+import {Container, ThemeProvider, useMediaQuery} from "@mui/material";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import useSiteMetadata from "./SiteMetadata";
@@ -13,6 +13,7 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <ThemeProvider theme={getTheme(preferLightMode ? 'light' : ' dark')}>
+      <CssBaseline />
       <div>
         <Helmet>
           <html lang="en" />
@@ -51,9 +52,11 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
-        <Navbar />
-        <div>{children}</div>
-        <Footer />
+        <Container style={{fontFamily: 'Rajdhani'}}>
+          <Navbar />
+          <div>{children}</div>
+          <Footer />
+        </Container>
       </div>
     </ThemeProvider>
   );
