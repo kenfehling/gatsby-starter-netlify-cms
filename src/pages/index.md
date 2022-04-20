@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Cat
+title: "The #1 Record Store on Mars"
 image: /img/thinking-of-getting-a-cat.png
 heading: Great coffee with a conscience
-subheading: Somewhat less sleepy than a rabbit?
+subheading: Since 2038
 mainpitch:
   title: Why Kaldi
   description: >
