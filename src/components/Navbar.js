@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import github from "../img/github-icon.svg";
-import { AppBar, IconButton, Drawer, Box, Button, Toolbar } from "@mui/material";
+import { AppBar, Container, IconButton, Drawer, Box, Button, Toolbar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import useScrollPosition from '@react-hook/window-scroll';
 
 const pages = ['Home', 'Shop', 'About', 'Locations'];
+const scrollFps = 10;
 const maxLogoSize = 200;
 const minLogoSize = 80;
 const minAtScrollPosition = 300;
@@ -23,7 +24,7 @@ const calcLogoSize = (scrollY) => {
 };
 
 const Logo = () => {
-  const scrollY = useScrollPosition(10)
+  const scrollY = useScrollPosition(scrollFps)
   const size = calcLogoSize(scrollY);
   return (
     <StaticImage
@@ -36,7 +37,7 @@ const Logo = () => {
       style={{
         position: 'absolute',
         top: 16,
-        left: '6%',
+        left: '4%',
         zIndex: 9999,
       }}
       imgStyle={{
@@ -53,38 +54,40 @@ const Navbar = () => {
   return (
     <>
       <AppBar position="fixed" color="navbar">
-        <Logo />
-        <Toolbar>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  sx={{ my: 1, color: 'primary.main', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              ))}
+        <Container>
+          <Toolbar>
+          <Logo />
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                {pages.map((page) => (
+                  <Button
+                    key={page}
+                    sx={{ my: 1, color: 'primary.main', display: 'block' }}
+                  >
+                    {page}
+                  </Button>
+                ))}
+              </Box>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton 
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="upload picture"
+                component="span"
+                disableRipple={true}
+                disableTouchRipple={true}
+                style={{zIndex: 9999}} 
+                sx={{
+                  color: 'primary.main',
+                  '&:hover': {
+                    color: 'primary.light'
+                  }
+                }}
+              >
+                {menuOpen ? <CloseIcon /> :  <MenuIcon />}
+              </IconButton>
             </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton 
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="upload picture"
-              component="span"
-              disableRipple={true}
-              disableTouchRipple={true}
-              style={{zIndex: 9999}} 
-              sx={{
-                color: 'primary.main',
-                '&:hover': {
-                  color: 'primary.light'
-                }
-              }}
-            >
-              {menuOpen ? <CloseIcon /> :  <MenuIcon />}
-            </IconButton>
-          </Box>
-        </Toolbar>
+          </Toolbar>
+        </Container>
       </AppBar>
       <Drawer
         sx={{
