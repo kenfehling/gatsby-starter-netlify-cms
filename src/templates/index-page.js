@@ -7,6 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import { ThemeProvider } from '@mui/system'
+import getTheme from '../theme';
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
