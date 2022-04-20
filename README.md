@@ -20,7 +20,6 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Uses `gatsby-plugin-image` with Netlify-CMS preview support
 - Separate components for everything
 - Netlify deploy configuration
-- Netlify function support, see `netlify/functions` folder
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ..and more
 
