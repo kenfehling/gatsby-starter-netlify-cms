@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import TemplateWrapper from '../../components/Layout'
+import { ThemeProvider } from '@mui/system'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <TemplateWrapper>
+    <ThemeProvider theme={getTheme('dark')}>
         <IndexPageTemplate
           image={getAsset(data.image)}
           title={data.title}
@@ -18,7 +18,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           intro={data.intro || { blurbs: [] }}
           mainpitch={data.mainpitch || {}}
         />
-      </TemplateWrapper>
+      </ThemeProvider>
     )
   } else {
     return <div>Loading...</div>
